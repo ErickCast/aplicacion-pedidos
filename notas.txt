@@ -1,0 +1,37 @@
+Para lograr la ejecucion basta con acceder a la siguiente URL:
+(CODEIGNITER)/index.php/(mi_controlador)/(funcion)
+
+Si la funcion tiene parametros entonces se deberia acceder de la siguiente forma:
+(CODEIGNITER)/index.php/(mi_controlador)/(funcion)/valor1/valor2/valor3
+
+const existe = carrito.some(productoCarrito => productoCarrito.id === producto.id);
+                if(existe){
+                    //Actualizamos la cantidad
+                    carrito = carrito.map(productoCarrito => {
+                        if(productoCarrito.id === producto.id){
+                            productoCarrito.cantidad++;
+                            productoCarrito.subTotal=productoCarrito.precio*productoCarrito.cantidad;
+                            productoCarrito.total=productoCarrito.subTotal + (productoCarrito.subTotal*0.16);
+                            return productoCarrito; // retorna el objeto actualizado
+                        }else{
+                            return productoCarrito; // retorna los objetos que no son los duplicados
+                        }
+                    });
+                    //carrito=[...productos];
+                    //carrito=productos;
+                }else{
+                    //Agregamos elementos al arreglo de carrito
+                    //articulosCarrito = [...articulosCarrito, infoCurso];
+                    carrito.push(producto);
+                }
+
+Investigar moment.js
+
+timestamp
+current_timestamp()
+insert_bash(); 
+update_bash();
+
+Pendiente: 
+Usar insert_bash()
+Usar update_bash()
